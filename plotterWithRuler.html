@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="grid.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script defer type="text/javascript" src="plotterWithRuler.js"></script>
+</head>
+
+<body onload="drawCanvas()">
+	<p id="movelog">Move mouse over canvas</p>
+	<div class="card">
+		<div id="wrapper" class="padding center">
+			<canvas id="canvasBottom" width=1025 height=515></canvas>
+			<canvas id="canvasTop" width=1000 height=500></canvas>
+		</div>
+	</div>
+	<div class="form-group row padding">
+		<div class="col-sm-2">
+			<label for="gridSpace">Grid Lines Space</label>
+			<select class="form-control" id="gridSpace" value="100" onchange="drawCanvas()">
+				<option value="30">30</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+			</select>
+		</div>
+		<div class="col-sm-2">
+			<label for="function">Wave Function</label>
+			<select class="form-control" id="function" value="sine" onchange="drawCanvas()">
+				<option value="sine">Sine</option>
+				<option value="cosine">Cosine</option>
+			</select>
+		</div>
+	</div>
+</body>
+
+</html>
